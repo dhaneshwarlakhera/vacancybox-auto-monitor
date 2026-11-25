@@ -98,7 +98,20 @@ def detect_category(title: str, default_cat: int) -> int:
             return cat_id
     return default_cat
 
-
+def extract_advt_no(title: str, url: str) -> str:
+    text = f"{title} {url}"
+    patterns = [
+        r"(CRPD/[A-Z0-9/\-]+)",
+        r"(CEN\s*No\.?\s*[0-9]+/[0-9]{4})",
+        r"(CEN\s*[0-9]+/[0-9]{4})",
+        r"(Advt\.?\s*No\.?\s*[A-Za-z0-9/\-]+)",
+    ]
+    for pat in patterns:
+        m = re.search(pat, text, flags=re.IGNORECASE)
+        if m:
+            return m.group(1).strip()
+    return ""
+    
 def fetch_portal_notices(portal: dict) -> list:
     notices = []
     try:
@@ -151,6 +164,7 @@ def create_wp_draft(notice: dict) -> str | None:
         ),
         "vb_org_name": notice["portal_name"],
         "vb_official_url": notice["official_site"],
+            "vb_advt_no": extract_advt_no(notice["title"], notice["link"]),
     }
     if cat_id == 3:  
         meta["vb_admit_url"] = notice["link"]
