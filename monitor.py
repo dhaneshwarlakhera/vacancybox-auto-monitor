@@ -152,8 +152,12 @@ def create_wp_draft(notice: dict) -> str | None:
         "vb_org_name": notice["portal_name"],
         "vb_official_url": notice["official_site"],
     }
-    if cat_id in (3, 4, 5):
+    if cat_id == 3:  
         meta["vb_admit_url"] = notice["link"]
+    elif cat_id == 4:
+        meta["vb_result_url"] = notice["link"]
+    elif cat_id == 5:
+        meta["vb_answer_key_url"] = notice["link"]
     elif is_pdf:
         meta["vb_pdf_url"] = notice["link"]
     else:
