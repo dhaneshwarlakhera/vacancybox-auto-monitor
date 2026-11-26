@@ -63,5 +63,22 @@
   { "id": "ntpc", "name": "NTPC Careers", "url": "https://careers.ntpc.co.in/", "official_site": "https://careers.ntpc.co.in/", "default_category_id": 2 },
   { "id": "bhel", "name": "BHEL Careers", "url": "https://careers.bhel.in/", "official_site": "https://careers.bhel.in/", "default_category_id": 2 },
   { "id": "coal_india", "name": "Coal India Limited (CIL)", "url": "https://www.coalindia.in/career-cil/jobs-coal-india/", "official_site": "https://www.coalindia.in/career-cil/jobs-coal-india/", "default_category_id": 2 },
-  { "id": "sail", "name": "SAIL (Steel Authority of India)", "url": "https://sailcareers.com/", "official_site": "https://sailcareers.com/", "default_category_id": 2 }
+  { "id": "sail", "name": "SAIL (Steel Authority of India)", "url": "https://sailcareers.com/", "official_site": "https://sailcareers.com/", "default_category_id": 2 },
+  { "id": "bpsc", "name": "BPSC (Bihar Public Service Commission)", "url": "https://bpsc.bihar.gov.in/", "official_site": "https://bpsc.bihar.gov.in/", "default_category_id": 2 },
+  { "id": "bssc", "name": "BSSC (Bihar Staff Selection Commission)", "url": "https://bssc.bihar.gov.in/NoticeBoard.htm", "official_site": "https://bssc.bihar.gov.in/", "default_category_id": 2 },
+  { "id": "csbc_bihar", "name": "CSBC Bihar Police Constable", "url": "https://csbc.bihar.gov.in/", "official_site": "https://csbc.bihar.gov.in/", "default_category_id": 2 },
+  { "id": "bpssc_bihar", "name": "BPSSC Bihar Police SI", "url": "https://bpssc.bihar.gov.in/Notices.htm", "official_site": "https://bpssc.bihar.gov.in/", "default_category_id": 2 },
+  { "id": "patna_hc", "name": "Patna High Court Recruitments", "url": "https://patnahighcourt.gov.in/notices/recruitments", "official_site": "https://patnahighcourt.gov.in/", "default_category_id": 2 },
+  { "id": "btsc_bihar", "name": "BTSC (Bihar Technical Service Commission)", "url": "https://btsc.bihar.gov.in/recruitment", "official_site": "https://btsc.bihar.gov.in/", "default_category_id": 2 },
+  { "id": "shs_bihar", "name": "State Health Society Bihar (SHSB)", "url": "https://shs.bihar.gov.in/Advertisement", "official_site": "https://shs.bihar.gov.in/", "default_category_id": 2 },
+  { "id": "bsphcl", "name": "BSPHCL (Bihar Power Holding)", "url": "https://www.bsphcl.co.in/Recruitment.aspx", "official_site": "https://www.bsphcl.co.in/", "default_category_id": 2 },
+  { "id": "mpesb", "name": "MPESB (MP Employees Selection Board)", "url": "https://esb.mponline.gov.in/", "official_site": "https://esb.mponline.gov.in/", "default_category_id": 2 },
+  { "id": "mppsc", "name": "MPPSC (Madhya Pradesh PSC)", "url": "https://mppsc.mp.gov.in/", "official_site": "https://mppsc.mp.gov.in/", "default_category_id": 2 },
+  { "id": "mphc", "name": "High Court of Madhya Pradesh", "url": "https://mphc.gov.in/recruitment-results", "official_site": "https://mphc.gov.in/", "default_category_id": 2 },
+  { "id": "nhm_mp", "name": "NHM Madhya Pradesh", "url": "https://nhmmp.gov.in/", "official_site": "https://nhmmp.gov.in/", "default_category_id": 2 },
+  { "id": "hssc", "name": "HSSC (Haryana Staff Selection Commission)", "url": "https://hssc.gov.in/advertisement", "official_site": "https://www.hssc.gov.in/", "default_category_id": 2 },
+  { "id": "hpsc", "name": "HPSC (Haryana Public Service Commission)", "url": "https://hpsc.gov.in/", "official_site": "https://hpsc.gov.in/", "default_category_id": 2 },
+  { "id": "hkrnl", "name": "HKRNL (Haryana Kaushal Rozgar Nigam)", "url": "https://hkrnl.itiharyana.gov.in/", "official_site": "https://hkrnl.itiharyana.gov.in/", "default_category_id": 2 },
+  { "id": "sssc_hc", "name": "Punjab & Haryana High Court (SSSC)", "url": "https://www.sssc.gov.in/", "official_site": "https://www.sssc.gov.in/", "default_category_id": 2 },
+  { "id": "bseh_haryana", "name": "BSEH Bhiwani (HTET / Haryana Board)", "url": "https://bseh.org.in/home", "official_site": "https://bseh.org.in/home", "default_category_id": 7 }
 ]
