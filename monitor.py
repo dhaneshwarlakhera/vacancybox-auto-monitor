@@ -131,7 +131,7 @@ def fetch_portal_notices(portal: dict) -> list:
                    pages_to_scan.insert(0, (strip_layout_tags(sub_resp.text), sub_url))
                except Exception:
                    pass
-   for page_soup, base_url in pages_to_scan:
+       for page_soup, base_url in pages_to_scan:
             for a in page_soup.find_all("a", href=True):
                 title = clean_text(a.get_text(" ", strip=True))
                 href = a["href"].strip()
