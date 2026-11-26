@@ -107,7 +107,7 @@ def find_recruitment_subpage(soup: BeautifulSoup, base_url: str) -> str:
     for a in soup.find_all("a", href=True):
         href = a["href"].strip()
         if not href or href.startswith(("#", "javascript:", "mailto:", "tel:")): continue
-       full_url = urljoin(base_url, href); parsed = urlparse(full_url)
+        full_url = urljoin(base_url, href); parsed = urlparse(full_url)
         if parsed.scheme not in ("http", "https") or parsed.netloc.lower() != base_host or parsed.path.lower().endswith(".pdf") or full_url.rstrip("/") == base_url.rstrip("/"): continue
         txt = clean_text(a.get_text(" ", strip=True)).lower(); combined = f"{txt} {full_url.lower()}"
         if any(bad in combined for bad in JUNK_KEYWORDS): continue
