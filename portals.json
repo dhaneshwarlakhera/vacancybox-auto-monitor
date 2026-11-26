@@ -141,5 +141,21 @@
   { "id": "nvs", "name": "NVS (Navodaya Vidyalaya Samiti)", "url": "https://navodaya.gov.in/", "official_site": "https://navodaya.gov.in/", "default_category_id": 2 },
   { "id": "aiims_exams", "name": "AIIMS Exams (NORCET / CRE / Recruitment)", "url": "https://aiimsexams.ac.in/", "official_site": "https://aiimsexams.ac.in/", "default_category_id": 2 },
   { "id": "pgimer", "name": "PGIMER Chandigarh", "url": "https://pgimer.edu.in/", "official_site": "https://pgimer.edu.in/", "default_category_id": 2 },
-  { "id": "jipmer", "name": "JIPMER Puducherry", "url": "https://jipmer.edu.in/", "official_site": "https://jipmer.edu.in/", "default_category_id": 2 }
+  { "id": "jipmer", "name": "JIPMER Puducherry", "url": "https://jipmer.edu.in/", "official_site": "https://jipmer.edu.in/", "default_category_id": 2 },
+  { "id": "rrb_unified", "name": "RRB Unified Portal (Indian Railways)", "url": "https://rrb.indianrailways.gov.in/", "official_site": "https://rrb.indianrailways.gov.in/", "default_category_id": 2 },
+  { "id": "rrb_apply", "name": "RRB Centralized Online Apply Portal", "url": "https://www.rrbapply.gov.in/", "official_site": "https://www.rrbapply.gov.in/", "default_category_id": 2 },
+{ "id": "rrb_ajmer", "name": "RRB Ajmer", "url": "https://www.rrbajmer.gov.in/", "official_site": "https://www.rrbajmer.gov.in/", "default_category_id": 2 },
+  { "id": "rrb_mumbai", "name": "RRB Mumbai", "url": "https://www.rrbmumbai.gov.in/", "official_site": "https://www.rrbmumbai.gov.in/", "default_category_id": 2 },
+{ "id": "rrb_kolkata", "name": "RRB Kolkata", "url": "https://www.rrbkolkata.gov.in/", "official_site": "https://www.rrbkolkata.gov.in/", "default_category_id": 2 },
+{ "id": "rrb_chennai", "name": "RRB Chennai", "url": "https://www.rrbchennai.gov.in/", "official_site": "https://www.rrbchennai.gov.in/", "default_category_id": 2 },
+{ "id": "rrb_gorakhpur", "name": "RRB Gorakhpur", "url": "https://rrbgkp.gov.in/", "official_site": "https://rrbgkp.gov.in/", "default_category_id": 2 },
+{ "id": "rrb_malda", "name": "RRB Malda", "url": "https://www.rrbmalda.gov.in/", "official_site": "https://www.rrbmalda.gov.in/", "default_category_id": 2 },
+{ "id": "sci_india", "name": "Supreme Court of India Recruitments", "url": "https://www.sci.gov.in/recruitments/", "official_site": "https://www.sci.gov.in/", "default_category_id": 2 },
+{ "id": "gujarat_hc", "name": "High Court of Gujarat", "url": "https://gujarathighcourt.nic.in/currentopenings", "official_site": "https://gujarathighcourt.nic.in/", "default_category_id": 2 },
+{ "id": "orissa_hc", "name": "Orissa High Court (Cuttack)", "url": "https://www.orissahighcourt.nic.in/recruitment-corner/", "official_site": "https://www.orissahighcourt.nic.in/", "default_category_id": 2 },
+{ "id": "jharkhand_hc", "name": "High Court of Jharkhand", "url": "https://jharkhandhighcourt.nic.in/", "official_site": "https://jharkhandhighcourt.nic.in/", "default_category_id": 2 },
+{ "id": "jk_hc", "name": "Jammu & Kashmir and Ladakh High Court", "url": "https://jkhighcourt.nic.in/noti.php", "official_site": "https://jkhighcourt.nic.in/", "default_category_id": 2 },
+{ "id": "jnu_delhi", "name": "Jawaharlal Nehru University (JNU)", "url": "https://www.jnu.ac.in/career", "official_site": "https://www.jnu.ac.in/", "default_category_id": 2 },
+{ "id": "jmi_delhi", "name": "Jamia Millia Islamia (JMI)", "url": "https://jmi.ac.in/BULLETIN-BOARD/Jobs/Careers@JMI", "official_site": "https://jmi.ac.in/", "default_category_id": 2 },
+{ "id": "ignou", "name": "IGNOU Careers", "url": "https://www.ignou.ac.in/pages/5", "official_site": "https://www.ignou.ac.in/", "default_category_id": 2 }
 ]
