@@ -1,0 +1,39 @@
+name: Vacancy Box Telegram Auto-Broadcast
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  broadcast-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Broadcast new/updated WP posts to @vacancybox_in
+        env:
+          WP_URL: ${{ secrets.WP_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: "@vacancybox_in"
+        run: python broadcast_posts.py
+
+      - name: Save broadcast state
+        run: |
+          git config user.name "VacancyBox Bot"
+          git config user.email "bot@vacancybox.in"
+          git add broadcast_state.json
+          git diff --staged --quiet || git commit -m "Update broadcast state"
+          git push
