@@ -115,7 +115,7 @@ def extract_advt_no(title: str, url: str) -> str:
 def fetch_portal_notices(portal: dict) -> list:
     notices = []
     try:
-        resp = requests.get(portal["url"], headers=HEADERS, timeout=22, verify=False)
+        resp = requests.get(portal["url"], headers=HEADERS, timeout=12, verify=False)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
         seen_local = set()
@@ -229,7 +229,7 @@ def main() -> None:
     initialized = bool(state.get("initialized", False))
 
     all_notices = []
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    with ThreadPoolExecutor(max_workers=20) as pool:
         futures = [pool.submit(fetch_portal_notices, p) for p in portals]
         for fut in as_completed(futures):
             all_notices.extend(fut.result())
