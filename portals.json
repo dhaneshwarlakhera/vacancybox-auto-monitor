@@ -36,7 +36,7 @@
   { "id": "ndmc_delhi", "name": "New Delhi Municipal Council (NDMC)", "url": "https://www.ndmc.gov.in/vacancy_new.aspx", "official_site": "https://www.ndmc.gov.in/", "default_category_id": 2 },
   { "id": "djb_delhi", "name": "Delhi Jal Board (DJB)", "url": "https://delhijalboard.delhi.gov.in/recruitment", "official_site": "https://delhijalboard.delhi.gov.in/", "default_category_id": 2 },
   { "id": "aiims_delhi", "name": "AIIMS New Delhi", "url": "https://aiimsexams.ac.in/career/recruitment-notice", "official_site": "https://aiimsexams.ac.in/", "default_category_id": 2 },
-  { "id": "du_delhi", "name": "University of Delhi (Work with DU)", "url": "https://www.du.ac.in/index.php?page=work-with-du", "official_site": "https://www.du.ac.in/", "default_category_id": 2 ,
+  { "id": "du_delhi", "name": "University of Delhi (Work with DU)", "url": "https://www.du.ac.in/index.php?page=work-with-du", "official_site": "https://www.du.ac.in/", "default_category_id": 2 },
    { "id": "upsssc", "name": "UPSSSC (UP Subordinate Services Selection Commission)", "url": "https://upsssc.gov.in/", "official_site": "https://upsssc.gov.in/", "default_category_id": 2 },
    { "id": "allahabad_hc", "name": "High Court of Judicature at Allahabad", "url": "https://allahabadhighcourt.in/calendar/itemWiseList.jsp?group=7", "official_site": "https://allahabadhighcourt.in/", "default_category_id": 2 },
   { "id": "up_sewayojan", "name": "UP Sewayojan (Rojgar Sangam)", "url": "https://sewayojan.up.nic.in/governmentjob.aspx", "official_site": "https://sewayojan.up.nic.in/", "default_category_id": 2 },
