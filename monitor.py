@@ -229,7 +229,7 @@ def main() -> None:
     initialized = bool(state.get("initialized", False))
 
     all_notices = []
-    with ThreadPoolExecutor(max_workers=20) as pool:
+    with ThreadPoolExecutor(max_workers=30) as pool:
         futures = [pool.submit(fetch_portal_notices, p) for p in portals]
         for fut in as_completed(futures):
             all_notices.extend(fut.result())
