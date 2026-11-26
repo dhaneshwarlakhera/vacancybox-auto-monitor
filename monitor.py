@@ -4,7 +4,7 @@ import os
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import requests
 import urllib3
@@ -32,22 +32,9 @@ HEADERS = {
     "Accept-Language": "en-IN,en;q=0.9",
 }
 
-RELEVANT_KEYWORDS = [
-    "recruitment", "vacancy", "vacancies", "notification", "advertisement",
-    "advt", "online form", "apply", "admit card", "hall ticket", "call letter",
-    "exam city", "result", "merit list", "score card", "cut off", "cutoff",
-    "answer key", "response sheet", "syllabus", "exam pattern", "admission",
-    "counselling", "bharti", "pariksha", "notice", "examination", "cgl",
-    "chsl", "mts", "ntpc", "group d", "constable", "sub inspector", "po", "clerk",
-]
-
-IGNORE_KEYWORDS = [
-    "privacy policy", "terms and conditions", "contact us", "about us",
-    "sitemap", "feedback", "screen reader", "skip to main", "hindi version",
-    "english version", "login", "forgot password", "rti", "tender", "tenders",
-    "hyperlinking policy", "copyright", "disclaimer", "gallery", "archive",
-]
-
+JUNK_KEYWORDS = ["tender", "quotation", "e-procurement", "procurement", "rti", "right to information", "holiday", "transfer", "posting", "seniority", "gradation", "promotion", "gallery", "photo", "video", "press release", "about us", "contact us", "privacy", "disclaimer", "sitemap", "feedback", "grievance", "vigilance", "annual report", "budget", "archive", "login", "forgot password", "screen reader", "skip to", "facebook", "twitter", "youtube", "instagram", "linkedin", "whatsapp", "copyright", "terms", "faq", "helpdesk", "telephone", "who's who"]
+JOB_KEYWORDS = ["recruitment", "vacancy", "vacancies", "advt", "advertisement", "notification", "bharti", "admit card", "hall ticket", "call letter", "e-admit", "result", "merit list", "shortlist", "selection list", "answer key", "response sheet", "cut off", "cutoff", "exam date", "exam schedule", "syllabus", "online apply", "apply online", "application form", "walk-in", "apprentice", "constable", "sub-inspector", "clerk", "patwari", "teacher", "nursing", "officer", "assistant", "engineer", "scientist", "cgl", "chsl", "mts", "ntpc", "group d", "pcs", "norcet", "ctet", "tet", "neet", "cuet", "ugc-net"]
+SUBPAGE_KEYWORDS = ["recruitment", "notifications", "vacancies", "career", "advertisement", "notice board", "latest updates"]
 # Vacancy Box WordPress Category IDs
 CATEGORY_RULES = [
     (3, ["admit card", "hall ticket", "call letter", "exam city", "e-admit"]),
@@ -81,15 +68,12 @@ def clean_text(text: str) -> str:
 
 
 def is_relevant(title: str, href: str) -> bool:
-    t = title.lower()
-    if len(t) < 12 or len(t) > 220:
-        return False
-    if any(bad in t for bad in IGNORE_KEYWORDS):
-        return False
-    if href.lower().endswith(".pdf"):
-        return True
-    return any(kw in t for kw in RELEVANT_KEYWORDS)
-
+    t, h = title.lower(), href.lower()
+    is_pdf = h.split("?")[0].endswith(".pdf")
+    if (len(t) < 12 and not is_pdf) or len(t) > 220: return False
+    combined = f"{t} {h}"    
+    if any(bad in combined for bad in JUNK_KEYWORDS): return False
+    return any(kw in combined for kw in JOB_KEYWORDS)    
 
 def detect_category(title: str, default_cat: int) -> int:
     t = title.lower()
@@ -111,38 +95,68 @@ def extract_advt_no(title: str, url: str) -> str:
         if m:
             return m.group(1).strip()
     return ""
-    
+def is_root_homepage(url: str) -> bool:
+    p = urlparse(url).path.lower()
+    return p in ("", "/") or p.startswith("/index.") or p.startswith("/home")
+def strip_layout_tags(html_text: str) -> BeautifulSoup:
+    stripped = BeautifulSoup(html_text, "html.parser")
+    for tag in stripped.find_all(["header", "footer", "nav"]): tag.decompose()
+    return stripped if stripped.get_text(strip=True) else BeautifulSoup(html_text, "html.parser")
+def find_recruitment_subpage(soup: BeautifulSoup, base_url: str) -> str:
+    base_host = urlparse(base_url).netloc.lower(); best_url, best_score = "", 0
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        if not href or href.startswith(("#", "javascript:", "mailto:", "tel:")): continue
+         full_url = urljoin(base_url, href); parsed = urlparse(full_url)
+        if parsed.scheme not in ("http", "https") or parsed.netloc.lower() != base_host or parsed.path.lower().endswith(".pdf") or full_url.rstrip("/") == base_url.rstrip("/"): continue
+        txt = clean_text(a.get_text(" ", strip=True)).lower(); combined = f"{txt} {full_url.lower()}"
+        if any(bad in combined for bad in JUNK_KEYWORDS): continue
+        score = sum(1 for kw in SUBPAGE_KEYWORDS if kw in combined)
+        if score > best_score and len(txt) <= 80: best_score, best_url = score, full_url
+    return best_url            
 def fetch_portal_notices(portal: dict) -> list:
     notices = []
     try:
         resp = requests.get(portal["url"], headers=HEADERS, timeout=12, verify=False)
         resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
+        raw_soup = BeautifulSoup(resp.text, "html.parser")
         seen_local = set()
-
-        for a in soup.find_all("a", href=True):
-            title = clean_text(a.get_text(" ", strip=True))
-            href = a["href"].strip()
-            if not href or href.startswith(("#", "javascript:", "mailto:", "tel:")):
-                continue
-            full_url = urljoin(portal["url"], href)
-            if not is_relevant(title, full_url):
-                continue
-            key = (title.lower(), full_url)
-            if key in seen_local:
-                continue
-            seen_local.add(key)
-            notices.append({
-                "portal_id": portal["id"],
-                "portal_name": portal["name"],
-                "official_site": portal["official_site"],
-                "title": title,
-                "link": full_url,
-                "category_id": detect_category(title, portal.get("default_category_id", 2)),
-            })
-            if len(notices) >= 25:
-                break
-        print(f"[OK] {portal['id']}: {len(notices)} relevant links found")
+        pages_to_scan = [(strip_layout_tags(resp.text), portal["url"])]
+        if is_root_homepage(portal["url"]):
+           sub_url = find_recruitment_subpage(raw_soup, portal["url"])
+           if sub_url:
+               try:
+                   sub_resp = requests.get(sub_url, headers=HEADERS, timeout=12, verify=False)
+                   sub_resp.raise_for_status()
+                   pages_to_scan.insert(0, (strip_layout_tags(sub_resp.text), sub_url))
+               except Exception:
+                   pass
+       for page_soup, base_url in pages_to_scan:
+            for a in page_soup.find_all("a", href=True):
+                title = clean_text(a.get_text(" ", strip=True))
+                href = a["href"].strip()
+                if not href or href.startswith(("#", "javascript:", "mailto:", "tel:")):
+                    continue
+                full_url = urljoin(base_url, href)
+                if not is_relevant(title, full_url):
+                    continue
+                key = (title.lower(), full_url)
+                if key in seen_local:
+                    continue
+                seen_local.add(key)
+                notices.append({
+                    "portal_id": portal["id"],
+                    "portal_name": portal["name"],
+                    "official_site": portal["official_site"],
+                    "title": title,
+                    "link": full_url,
+                    "category_id": detect_category(title, portal.get("default_category_id", 2)),
+                })
+                if len(notices) >= 25:
+                    break
+             if notices:
+                    break
+             print(f"[OK] {portal['id']}: {len(notices)} relevant links found")
     except Exception as exc:
         print(f"[WARN] {portal['id']} failed: {exc}")
     return notices
