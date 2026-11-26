@@ -1,79 +1,29 @@
 [
-  {
-    "id": "ssc",
-    "name": "Staff Selection Commission (SSC)",
-    "url": "https://ssc.gov.in/home/notice-board",
-    "official_site": "https://ssc.gov.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "upsc",
-    "name": "Union Public Service Commission (UPSC)",
-    "url": "https://www.upsc.gov.in/",
-    "official_site": "https://www.upsc.gov.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "rrb",
-    "name": "Railway Recruitment Board (RRB)",
-    "url": "https://www.rrbcdg.gov.in/",
-    "official_site": "https://www.rrbapply.gov.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "ibps",
-    "name": "Institute of Banking Personnel Selection (IBPS)",
-    "url": "https://www.ibps.in/",
-    "official_site": "https://www.ibps.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "sbi",
-    "name": "State Bank of India (SBI Careers)",
-    "url": "https://sbi.bank.in/web/careers/current-openings",
-    "official_site": "https://sbi.bank.in/web/careers/current-openings",
-    "default_category_id": 2
-  },
-  {
-    "id": "nta",
-    "name": "National Testing Agency (NTA)",
-    "url": "https://nta.ac.in/",
-    "official_site": "https://nta.ac.in/",
-    "default_category_id": 7
-  },
-  {
-    "id": "indiapost_gds",
-    "name": "India Post GDS",
-    "url": "https://indiapostgdsonline.gov.in/",
-    "official_site": "https://indiapostgdsonline.gov.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "rajasthan_recruitment",
-    "name": "Rajasthan Recruitment Portal (RPSC & RSSB)",
-    "url": "https://www.recruitment.rajasthan.gov.in/",
-    "official_site": "https://www.recruitment.rajasthan.gov.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "uppsc",
-    "name": "Uttar Pradesh Public Service Commission (UPPSC)",
-    "url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
-    "official_site": "https://uppsc.up.nic.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "up_police",
-    "name": "UP Police Recruitment & Promotion Board (UPPRPB)",
-    "url": "https://uppbpb.gov.in/home/notice",
-    "official_site": "https://uppbpb.gov.in/",
-    "default_category_id": 2
-  },
-  {
-    "id": "rojgar_samachar",
-    "name": "Rozgar Samachar (Employment News)",
-    "url": "https://rojgarsamachar.gov.in/NewRS/Home.aspx",
-    "official_site": "https://rojgarsamachar.gov.in/NewRS/Home.aspx",
-    "default_category_id": 2
-  }
+  { "id": "ssc", "name": "Staff Selection Commission (SSC)", "url": "https://ssc.gov.in/home/notice-board", "official_site": "https://ssc.gov.in/", "default_category_id": 2 },
+  { "id": "upsc", "name": "Union Public Service Commission (UPSC)", "url": "https://www.upsc.gov.in/", "official_site": "https://www.upsc.gov.in/", "default_category_id": 2 },
+  { "id": "rrb", "name": "Railway Recruitment Board (RRB)", "url": "https://www.rrbcdg.gov.in/", "official_site": "https://www.rrbcdg.gov.in/", "default_category_id": 2 },
+  { "id": "ibps", "name": "Institute of Banking Personnel Selection (IBPS)", "url": "https://www.ibps.in/", "official_site": "https://www.ibps.in/", "default_category_id": 2 },
+  { "id": "sbi", "name": "State Bank of India (SBI Careers)", "url": "https://sbi.bank.in/web/careers/current-openings", "official_site": "https://sbi.bank.in/web/careers/current-openings", "default_category_id": 2 },
+  { "id": "nta", "name": "National Testing Agency (NTA)", "url": "https://nta.ac.in/", "official_site": "https://nta.ac.in/", "default_category_id": 7 },
+  { "id": "indiapost_gds", "name": "India Post GDS", "url": "https://indiapostgdsonline.gov.in/", "official_site": "https://indiapostgdsonline.gov.in/", "default_category_id": 2 },
+  { "id": "rajasthan_recruitment", "name": "Rajasthan Recruitment Portal (RPSC & RSSB)", "url": "https://www.recruitment.rajasthan.gov.in/", "official_site": "https://www.recruitment.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "uppsc", "name": "Uttar Pradesh Public Service Commission (UPPSC)", "url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx", "official_site": "https://uppsc.up.nic.in/", "default_category_id": 2 },
+  { "id": "up_police", "name": "UP Police Recruitment & Promotion Board (UPPRPB)", "url": "https://uppbpb.gov.in/home/notice", "official_site": "https://uppbpb.gov.in/", "default_category_id": 2 },
+  { "id": "rojgar_samachar", "name": "Rozgar Samachar (Employment News)", "url": "https://rojgarsamachar.gov.in/NewRS/Home.aspx", "official_site": "https://rojgarsamachar.gov.in/NewRS/Home.aspx", "default_category_id": 2 },
+  { "id": "rpsc", "name": "RPSC (Rajasthan Public Service Commission)", "url": "https://rpsc.rajasthan.gov.in/news", "official_site": "https://rpsc.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "rssb", "name": "RSSB / RSMSSB (Rajasthan Staff Selection Board)", "url": "https://rssb.rajasthan.gov.in/", "official_site": "https://rssb.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "raj_police", "name": "Rajasthan Police", "url": "https://police.rajasthan.gov.in/", "official_site": "https://police.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "raj_hc", "name": "Rajasthan High Court (Jodhpur)", "url": "https://hcraj.nic.in/", "official_site": "https://hcraj.nic.in/", "default_category_id": 2 },
+  { "id": "raj_energy", "name": "Rajasthan Energy / Vidyut Nigam (RVUNL)", "url": "https://energy.rajasthan.gov.in/", "official_site": "https://energy.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "raj_education", "name": "Rajasthan Education Dept (Bikaner)", "url": "https://education.rajasthan.gov.in/", "official_site": "https://education.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "raj_shaladarpan", "name": "Rajasthan Shala Darpan Portal", "url": "https://rajshaladarpan.nic.in/", "official_site": "https://rajshaladarpan.nic.in/", "default_category_id": 2 },
+  { "id": "rbse", "name": "RBSE (Board of Secondary Education Rajasthan)", "url": "https://rajeduboard.rajasthan.gov.in/", "official_site": "https://rajeduboard.rajasthan.gov.in/", "default_category_id": 7 },
+  { "id": "raj_sihfw", "name": "SIHFW Rajasthan (Medical & Nursing)", "url": "http://sihfwrajasthan.com/", "official_site": "http://sihfwrajasthan.com/", "default_category_id": 2 },
+  { "id": "rajswasthya", "name": "Medical & Health Dept Rajasthan (Rajswasthya)", "url": "https://rajswasthya.nic.in/", "official_site": "https://rajswasthya.nic.in/", "default_category_id": 2 },
+  { "id": "ruhs", "name": "RUHS Jaipur (Health Sciences)", "url": "https://ruhsraj.org/", "official_site": "https://ruhsraj.org/", "default_category_id": 7 },
+  { "id": "aiims_jodhpur", "name": "AIIMS Jodhpur", "url": "https://www.aiimsjodhpur.edu.in/", "official_site": "https://www.aiimsjodhpur.edu.in/", "default_category_id": 2 },
+  { "id": "raj_lsg", "name": "Rajasthan Local Self Government (LSG)", "url": "https://lsg.urban.rajasthan.gov.in/", "official_site": "https://lsg.urban.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "rcrb", "name": "Rajasthan Cooperative Recruitment Board (RCRB)", "url": "https://rajcrb.rajasthan.gov.in/", "official_site": "https://rajcrb.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "doitc_raj", "name": "Rajasthan DOIT&C", "url": "https://doitc.rajasthan.gov.in/", "official_site": "https://doitc.rajasthan.gov.in/", "default_category_id": 2 },
+  { "id": "rrc_jaipur", "name": "RRC North Western Railway (Jaipur)", "url": "https://rrcjaipur.in/", "official_site": "https://rrcjaipur.in/", "default_category_id": 2 }
 ]
