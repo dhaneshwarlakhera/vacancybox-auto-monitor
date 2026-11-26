@@ -48,5 +48,20 @@
   { "id": "up_nhm", "name": "National Health Mission UP (UP NHM)", "url": "https://nhm.up.gov.in/Home/Opportunities", "official_site": "https://nhm.up.gov.in/", "default_category_id": 2 },
   { "id": "sgpgims", "name": "SGPGIMS Lucknow", "url": "https://sgpgims.org.in/Home/Recruitment_active.html", "official_site": "https://sgpgims.org.in/", "default_category_id": 2 },
   { "id": "kgmu", "name": "KGMU Lucknow (King George Medical Univ.)", "url": "https://www.kgmu.org/job.php", "official_site": "https://www.kgmu.org/", "default_category_id": 2 },
-  { "id": "upums", "name": "UPUMS Saifai (Etawah)", "url": "https://www.upums.ac.in/onlineRecruitment", "official_site": "https://www.upums.ac.in/", "default_category_id": 2 }
+  { "id": "upums", "name": "UPUMS Saifai (Etawah)", "url": "https://www.upums.ac.in/onlineRecruitment", "official_site": "https://www.upums.ac.in/", "default_category_id": 2 },
+  { "id": "indian_army", "name": "Join Indian Army", "url": "https://joinindianarmy.nic.in/", "official_site": "https://joinindianarmy.nic.in/", "default_category_id": 2 },
+  { "id": "coast_guard", "name": "Indian Coast Guard", "url": "https://joinindiancoastguard.cdac.in/", "official_site": "https://joinindiancoastguard.cdac.in/", "default_category_id": 2 },
+{ { "id": "drdo", "name": "DRDO (Defence Research & Development)", "url": "https://www.drdo.gov.in/", "official_site": "https://www.drdo.gov.in/", "default_category_id": 2 },
+  { "id": "isro", "name": "ISRO Careers", "url": "https://www.isro.gov.in/Careers.html", "official_site": "https://www.isro.gov.in/Careers.html", "default_category_id": 2 },
+  { "id": "hal", "name": "HAL (Hindustan Aeronautics Limited)", "url": "https://hal-india.co.in/career", "official_site": "https://hal-india.co.in/career", "default_category_id": 2 },
+  { "id": "bel", "name": "BEL (Bharat Electronics Limited)", "url": "https://bel-india.in/job-notifications/", "official_site": "https://bel-india.in/job-notifications/", "default_category_id": 2 },
+  { "id": "bsf", "name": "BSF Recruitment (Border Security Force)", "url": "https://rectt.bsf.gov.in/", "official_site": "https://rectt.bsf.gov.in/", "default_category_id": 2 },
+  { "id": "crpf", "name": "CRPF Recruitment", "url": "https://rect.crpf.gov.in/", "official_site": "https://rect.crpf.gov.in/", "default_category_id": 2 },
+  { "id": "cisf", "name": "CISF Recruitment", "url": "https://cisfrectt.cisf.gov.in/", "official_site": "https://cisfrectt.cisf.gov.in/", "default_category_id": 2 },
+  { "id": "iocl", "name": "IOCL (Indian Oil Corporation)", "url": "https://iocl.com/latest-job-opening", "official_site": "https://iocl.com/latest-job-opening", "default_category_id": 2 },
+  { "id": "powergrid", "name": "POWERGRID Careers", "url": "https://powergrid.in/en/job-opportunities1", "official_site": "https://powergrid.in/en/job-opportunities1", "default_category_id": 2 },
+  { "id": "ntpc", "name": "NTPC Careers", "url": "https://careers.ntpc.co.in/", "official_site": "https://careers.ntpc.co.in/", "default_category_id": 2 },
+  { "id": "bhel", "name": "BHEL Careers", "url": "https://careers.bhel.in/", "official_site": "https://careers.bhel.in/", "default_category_id": 2 },
+  { "id": "coal_india", "name": "Coal India Limited (CIL)", "url": "https://www.coalindia.in/career-cil/jobs-coal-india/", "official_site": "https://www.coalindia.in/career-cil/jobs-coal-india/", "default_category_id": 2 },
+  { "id": "sail", "name": "SAIL (Steel Authority of India)", "url": "https://sailcareers.com/", "official_site": "https://sailcareers.com/", "default_category_id": 2 }
 ]
