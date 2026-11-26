@@ -51,7 +51,7 @@
   { "id": "upums", "name": "UPUMS Saifai (Etawah)", "url": "https://www.upums.ac.in/onlineRecruitment", "official_site": "https://www.upums.ac.in/", "default_category_id": 2 },
   { "id": "indian_army", "name": "Join Indian Army", "url": "https://joinindianarmy.nic.in/", "official_site": "https://joinindianarmy.nic.in/", "default_category_id": 2 },
   { "id": "coast_guard", "name": "Indian Coast Guard", "url": "https://joinindiancoastguard.cdac.in/", "official_site": "https://joinindiancoastguard.cdac.in/", "default_category_id": 2 },
-{ { "id": "drdo", "name": "DRDO (Defence Research & Development)", "url": "https://www.drdo.gov.in/", "official_site": "https://www.drdo.gov.in/", "default_category_id": 2 },
+ { "id": "drdo", "name": "DRDO (Defence Research & Development)", "url": "https://www.drdo.gov.in/", "official_site": "https://www.drdo.gov.in/", "default_category_id": 2 },
   { "id": "isro", "name": "ISRO Careers", "url": "https://www.isro.gov.in/Careers.html", "official_site": "https://www.isro.gov.in/Careers.html", "default_category_id": 2 },
   { "id": "hal", "name": "HAL (Hindustan Aeronautics Limited)", "url": "https://hal-india.co.in/career", "official_site": "https://hal-india.co.in/career", "default_category_id": 2 },
   { "id": "bel", "name": "BEL (Bharat Electronics Limited)", "url": "https://bel-india.in/job-notifications/", "official_site": "https://bel-india.in/job-notifications/", "default_category_id": 2 },
