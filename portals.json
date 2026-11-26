@@ -25,5 +25,16 @@
   { "id": "raj_lsg", "name": "Rajasthan Local Self Government (LSG)", "url": "https://lsg.urban.rajasthan.gov.in/", "official_site": "https://lsg.urban.rajasthan.gov.in/", "default_category_id": 2 },
   { "id": "rcrb", "name": "Rajasthan Cooperative Recruitment Board (RCRB)", "url": "https://rajcrb.rajasthan.gov.in/", "official_site": "https://rajcrb.rajasthan.gov.in/", "default_category_id": 2 },
   { "id": "doitc_raj", "name": "Rajasthan DOIT&C", "url": "https://doitc.rajasthan.gov.in/", "official_site": "https://doitc.rajasthan.gov.in/", "default_category_id": 2 },
-  { "id": "rrc_jaipur", "name": "RRC North Western Railway (Jaipur)", "url": "https://rrcjaipur.in/", "official_site": "https://rrcjaipur.in/", "default_category_id": 2 }
+  { "id": "rrc_jaipur", "name": "RRC North Western Railway (Jaipur)", "url": "https://rrcjaipur.in/", "official_site": "https://rrcjaipur.in/", "default_category_id": 2 },
+  { "id": "dsssb_vacancies", "name": "DSSSB Delhi (Vacancies)", "url": "https://dsssb.delhi.gov.in/dsssb-vacancies", "official_site": "https://dsssb.delhi.gov.in/", "default_category_id": 2 },
+  { "id": "dsssb_results", "name": "DSSSB Delhi (Results)", "url": "https://dsssb.delhi.gov.in/results", "official_site": "https://dsssb.delhi.gov.in/", "default_category_id": 4 },
+  { "id": "delhi_police", "name": "Delhi Police Recruitments", "url": "https://delhipolice.gov.in/recruitments", "official_site": "https://delhipolice.gov.in/", "default_category_id": 2 },
+  { "id": "delhi_hc", "name": "High Court of Delhi", "url": "https://www.delhihighcourt.nic.in/web/", "official_site": "https://www.delhihighcourt.nic.in/web/", "default_category_id": 2 },
+  { "id": "delhi_district_courts", "name": "Delhi District Courts", "url": "https://delhicourts.nic.in/recruitment", "official_site": "https://delhicourts.nic.in/", "default_category_id": 2 },
+  { "id": "dda_delhi", "name": "Delhi Development Authority (DDA)", "url": "https://dda.gov.in/latest-jobs", "official_site": "https://dda.gov.in/", "default_category_id": 2 },
+  { "id": "dmrc_delhi", "name": "Delhi Metro Rail Corporation (DMRC)", "url": "https://delhimetrorail.com/pages/fr/career", "official_site": "https://delhimetrorail.com/", "default_category_id": 2 },
+  { "id": "ndmc_delhi", "name": "New Delhi Municipal Council (NDMC)", "url": "https://www.ndmc.gov.in/vacancy_new.aspx", "official_site": "https://www.ndmc.gov.in/", "default_category_id": 2 },
+  { "id": "djb_delhi", "name": "Delhi Jal Board (DJB)", "url": "https://delhijalboard.delhi.gov.in/recruitment", "official_site": "https://delhijalboard.delhi.gov.in/", "default_category_id": 2 },
+  { "id": "aiims_delhi", "name": "AIIMS New Delhi", "url": "https://aiimsexams.ac.in/career/recruitment-notice", "official_site": "https://aiimsexams.ac.in/", "default_category_id": 2 },
+  { "id": "du_delhi", "name": "University of Delhi (Work with DU)", "url": "https://www.du.ac.in/index.php?page=work-with-du", "official_site": "https://www.du.ac.in/", "default_category_id": 2 }
 ]
