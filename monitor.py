@@ -123,14 +123,14 @@ def fetch_portal_notices(portal: dict) -> list:
         seen_local = set()
         pages_to_scan = [(strip_layout_tags(resp.text), portal["url"])]
         if is_root_homepage(portal["url"]):
-           sub_url = find_recruitment_subpage(raw_soup, portal["url"])
-           if sub_url:
-               try:
-                   sub_resp = requests.get(sub_url, headers=HEADERS, timeout=12, verify=False)
-                   sub_resp.raise_for_status()
-                   pages_to_scan.insert(0, (strip_layout_tags(sub_resp.text), sub_url))
-               except Exception:
-                   pass
+            sub_url = find_recruitment_subpage(raw_soup, portal["url"])
+            if sub_url:
+                try:
+                    sub_resp = requests.get(sub_url, headers=HEADERS, timeout=12, verify=False)
+                    sub_resp.raise_for_status()
+                    pages_to_scan.insert(0, (strip_layout_tags(sub_resp.text), sub_url))
+                except Exception:
+                    pass
          for page_soup, base_url in pages_to_scan:
             for a in page_soup.find_all("a", href=True):
                 title = clean_text(a.get_text(" ", strip=True))
