@@ -36,5 +36,18 @@
   { "id": "ndmc_delhi", "name": "New Delhi Municipal Council (NDMC)", "url": "https://www.ndmc.gov.in/vacancy_new.aspx", "official_site": "https://www.ndmc.gov.in/", "default_category_id": 2 },
   { "id": "djb_delhi", "name": "Delhi Jal Board (DJB)", "url": "https://delhijalboard.delhi.gov.in/recruitment", "official_site": "https://delhijalboard.delhi.gov.in/", "default_category_id": 2 },
   { "id": "aiims_delhi", "name": "AIIMS New Delhi", "url": "https://aiimsexams.ac.in/career/recruitment-notice", "official_site": "https://aiimsexams.ac.in/", "default_category_id": 2 },
-  { "id": "du_delhi", "name": "University of Delhi (Work with DU)", "url": "https://www.du.ac.in/index.php?page=work-with-du", "official_site": "https://www.du.ac.in/", "default_category_id": 2 }
+  { "id": "du_delhi", "name": "University of Delhi (Work with DU)", "url": "https://www.du.ac.in/index.php?page=work-with-du", "official_site": "https://www.du.ac.in/", "default_category_id": 2 ,
+   { "id": "upsssc", "name": "UPSSSC (UP Subordinate Services Selection Commission)", "url": "https://upsssc.gov.in/", "official_site": "https://upsssc.gov.in/", "default_category_id": 2 },
+   { "id": "allahabad_hc", "name": "High Court of Judicature at Allahabad", "url": "https://allahabadhighcourt.in/calendar/itemWiseList.jsp?group=7", "official_site": "https://allahabadhighcourt.in/", "default_category_id": 2 },
+  { "id": "up_sewayojan", "name": "UP Sewayojan (Rojgar Sangam)", "url": "https://sewayojan.up.nic.in/governmentjob.aspx", "official_site": "https://sewayojan.up.nic.in/", "default_category_id": 2 },
+  { "id": "upessc", "name": "UPESSC (UP Shiksha Sewa Chayan Aayog)", "url": "https://upessc.up.gov.in/", "official_site": "https://upessc.up.gov.in/", "default_category_id": 2 },
+  { "id": "updeled", "name": "UP Pariksha Niyamak (UPTET / UP D.El.Ed)", "url": "https://updeled.gov.in/", "official_site": "https://updeled.gov.in/", "default_category_id": 7 },
+  { "id": "uppcl", "name": "UPPCL (UP Power Corporation Limited)", "url": "https://www.uppcl.org/", "official_site": "https://www.uppcl.org/", "default_category_id": 2 },
+  { "id": "upmrc", "name": "UP Metro Rail Corporation (UPMRC)", "url": "https://upmetrorail.com/careers/new-recruitments", "official_site": "https://upmetrorail.com/", "default_category_id": 2 },
+  { "id": "rrc_prayagraj", "name": "RRC North Central Railway (Prayagraj)", "url": "https://rrcpryj.org/notification/", "official_site": "https://rrcpryj.org/", "default_category_id": 2 },
+  { "id": "up_nhm", "name": "National Health Mission UP (UP NHM)", "url": "https://nhm.up.gov.in/Home/Opportunities", "official_site": "https://nhm.up.gov.in/", "default_category_id": 2 },
+  { "id": "sgpgims", "name": "SGPGIMS Lucknow", "url": "https://sgpgims.org.in/Home/Recruitment_active.html", "official_site": "https://sgpgims.org.in/", "default_category_id": 2 },
+  { "id": "kgmu", "name": "KGMU Lucknow (King George Medical Univ.)", "url": "https://www.kgmu.org/job.php", "official_site": "https://www.kgmu.org/", "default_category_id": 2 },
+  { "id": "upums", "name": "UPUMS Saifai (Etawah)", "url": "https://www.upums.ac.in/onlineRecruitment", "official_site": "https://www.upums.ac.in/", "default_category_id": 2 }
+  }
 ]
