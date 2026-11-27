@@ -125,37 +125,37 @@ def fetch_portal_notices(portal: dict) -> list:
         if is_root_homepage(portal["url"]):
             sub_url = find_recruitment_subpage(raw_soup, portal["url"])
             if sub_url:
-                try:
+                    try:
                     sub_resp = requests.get(sub_url, headers=HEADERS, timeout=12, verify=False)
                     sub_resp.raise_for_status()
                     pages_to_scan.insert(0, (strip_layout_tags(sub_resp.text), sub_url))
                 except Exception:
                     pass
-             for page_soup, base_url in pages_to_scan:
-                for a in page_soup.find_all("a", href=True):
-                    title = clean_text(a.get_text(" ", strip=True))
-                    href = a["href"].strip()
-                    if not href or href.startswith(("#", "javascript:", "mailto:", "tel:")):
-                        continue
-                    full_url = urljoin(base_url, href)
-                    if not is_relevant(title, full_url):
-                        continue
-                    key = (title.lower(), full_url)
-                    if key in seen_local:
-                        continue
-                    seen_local.add(key)
-                    notices.append({
-                        "portal_id": portal["id"],
-                        "portal_name": portal["name"],
-                        "official_site": portal["official_site"],
-                        "title": title,
-                        "link": full_url,
-                        "category_id": detect_category(title, portal.get("default_category_id", 2)),
-                    })
-                    if len(notices) >= 25:
-                        break
-                 if notices:
-                        break
+         for page_soup, base_url in pages_to_scan:
+            for a in page_soup.find_all("a", href=True):
+                title = clean_text(a.get_text(" ", strip=True))
+                href = a["href"].strip()
+                if not href or href.startswith(("#", "javascript:", "mailto:", "tel:")):
+                    continue
+                full_url = urljoin(base_url, href)
+                if not is_relevant(title, full_url):
+                    continue
+                key = (title.lower(), full_url)
+                if key in seen_local:
+                    continue
+                seen_local.add(key)
+                notices.append({
+                    "portal_id": portal["id"],
+                    "portal_name": portal["name"],
+                    "official_site": portal["official_site"],
+                    "title": title,
+                    "link": full_url,
+                    "category_id": detect_category(title, portal.get("default_category_id", 2)),
+                })
+                if len(notices) >= 25:
+                    break
+             if notices:
+                    break
                  print(f"[OK] {portal['id']}: {len(notices)} relevant links found")
         except Exception as exc:
             print(f"[WARN] {portal['id']} failed: {exc}")
