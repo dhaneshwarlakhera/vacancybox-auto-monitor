@@ -112,7 +112,7 @@ def find_recruitment_subpage(soup: BeautifulSoup, base_url: str) -> str:
         txt = clean_text(a.get_text(" ", strip=True)).lower(); combined = f"{txt} {full_url.lower()}"
         if any(bad in combined for bad in JUNK_KEYWORDS): continue
         score = sum(1 for kw in SUBPAGE_KEYWORDS if kw in combined)
-        if score > best_score and len(txt) <= 80: best_score, best_url = score, full_url
+        if score > best_score and len(txt) <= 80: best_url, best_score = full_url, score
     return best_url            
 def fetch_portal_notices(portal: dict) -> list:
     notices = []
@@ -125,13 +125,14 @@ def fetch_portal_notices(portal: dict) -> list:
         if is_root_homepage(portal["url"]):
             sub_url = find_recruitment_subpage(raw_soup, portal["url"])
             if sub_url:
-                    try:
+                try:
                     sub_resp = requests.get(sub_url, headers=HEADERS, timeout=12, verify=False)
                     sub_resp.raise_for_status()
                     pages_to_scan.insert(0, (strip_layout_tags(sub_resp.text), sub_url))
                 except Exception:
                     pass
-         for page_soup, base_url in pages_to_scan:
+
+        for page_soup, base_url in pages_to_scan:
             for a in page_soup.find_all("a", href=True):
                 title = clean_text(a.get_text(" ", strip=True))
                 href = a["href"].strip()
@@ -154,13 +155,13 @@ def fetch_portal_notices(portal: dict) -> list:
                 })
                 if len(notices) >= 25:
                     break
-             if notices:
-                    break
-                 print(f"[OK] {portal['id']}: {len(notices)} relevant links found")
-        except Exception as exc:
-            print(f"[WARN] {portal['id']} failed: {exc}")
-        return notices
-    
+            if notices:
+                break
+
+        print(f"[OK] {portal['id']}: {len(notices)} relevant links found")
+    except Exception as exc:
+        print(f"[WARN] {portal['id']} failed: {exc}")
+    return notices
 
 def create_wp_draft(notice: dict) -> str | None:
     if not WP_USERNAME or not WP_APP_PASSWORD:
@@ -178,7 +179,7 @@ def create_wp_draft(notice: dict) -> str | None:
         ),
         "vb_org_name": notice["portal_name"],
         "vb_official_url": notice["official_site"],
-            "vb_advt_no": extract_advt_no(notice["title"], notice["link"]),
+        "vb_advt_no": extract_advt_no(notice["title"], notice["link"]),
     }
     if cat_id == 3:  
         meta["vb_admit_url"] = notice["link"]
