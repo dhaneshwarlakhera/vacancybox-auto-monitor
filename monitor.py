@@ -111,7 +111,7 @@ def find_recruitment_subpage(soup: BeautifulSoup, base_url: str) -> str:
         if parsed.scheme not in ("http", "https") or parsed.netloc.lower() != base_host or parsed.path.lower().endswith(".pdf") or full_url.rstrip("/") == base_url.rstrip("/"): continue
         txt = clean_text(a.get_text(" ", strip=True)).lower(); combined = f"{txt} {full_url.lower()}"
         if any(bad in combined for bad in JUNK_KEYWORDS): continue
-        score = sum(1 for kw in SUBPAGE_KEYWORDS if kw in combined)
+        score = 0
         if score > best_score and len(txt) <= 80: best_url, best_score = full_url, score
     return best_url            
 def fetch_portal_notices(portal: dict) -> list:
