@@ -1,6 +1,6 @@
 [
   { "id": "ssc", "name": "Staff Selection Commission (SSC)", "url": "https://ssc.gov.in/home/notice-board", "official_site": "https://ssc.gov.in/", "default_category_id": 2 },
-  { "id": "upsc", "name": "Union Public Service Commission (UPSC)", "url": "https://www.upsc.gov.in/", "official_site": "https://www.upsc.gov.in/", "default_category_id": 2 },
+  { "id": "upsc", "name": "Union Public Service Commission (UPSC)", "url": "https://www.upsc.gov.in/advertisements/", "official_site": "https://www.upsc.gov.in/", "default_category_id": 2 },
   { "id": "rrb", "name": "Railway Recruitment Board (RRB)", "url": "https://www.rrbcdg.gov.in/", "official_site": "https://www.rrbcdg.gov.in/", "default_category_id": 2 },
   { "id": "ibps", "name": "Institute of Banking Personnel Selection (IBPS)", "url": "https://www.ibps.in/", "official_site": "https://www.ibps.in/", "default_category_id": 2 },
   { "id": "sbi", "name": "State Bank of India (SBI Careers)", "url": "https://sbi.bank.in/web/careers/current-openings", "official_site": "https://sbi.bank.in/web/careers/current-openings", "default_category_id": 2 },
