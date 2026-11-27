@@ -564,8 +564,3 @@ def main() -> int:
 if __name__ == "__main__":
     raise SystemExit(main())
 
-
-
-env:
-  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-  TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
